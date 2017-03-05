@@ -72,13 +72,15 @@ I decided to search random window positions at random scales all over the image 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
 Some example of my pipeline:
-![Image 1](output_images/test1.jpg =100x20)
-![Image 2](output_images/test2.jpg =100x20)
-![Image 3](output_images/test3.jpg =100x20)
-![Image 4](output_images/test4.jpg =100x20)
-![Image 5](output_images/test5.jpg =100x20)
-![Image 6](output_images/test6.jpg =100x20)
 
+<img src="output_images/test1.jpg" align="left" height="150">
+<img src="output_images/test2.jpg" align="left" height="150">
+<img src="output_images/test3.jpg" align="left" height="150">
+<img src="output_images/test4.jpg" align="left" height="150">
+<img src="output_images/test5.jpg" align="left" height="150">
+<img src="output_images/test6.jpg" align="left" height="150">
+
+<br>
 ---
 ### Video Implementation
 
