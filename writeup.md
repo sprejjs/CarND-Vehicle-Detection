@@ -29,7 +29,27 @@ hog3 = get_hog_features(ch3, orient, pix_per_cell, cell_per_block, feature_vec=F
 
 ####2. Explain how you settled on your final choice of HOG parameters.
 
-I have tried various parameters during the training of my network and observed the change in accuracy. I ended up using the parameters which gave me the best accuracy despite the loss in computation speed.
+I have tried various parameters during the training of my network and observed the change in accuracy.
+
+First, I have converted the color space to `YCrCb`, I found that this color space gives me the best results to help me find the cars of different colors. The white car was especially hard to locate in `HSV` color space, for example.
+
+Here is the rest of my `HOG` parameters.
+
+```python
+orient = 9  # HOG orientations
+pix_per_cell = 8 # HOG pixels per cell
+cell_per_block = 2 # HOG cells per block
+hog_channel = "ALL" # Can be 0, 1, 2, or "ALL"
+spatial_size = (32, 32) # Spatial binning dimensions
+hist_bins = 32    # Number of histogram bins
+spatial_feat = True # Spatial features on or off
+hist_feat = True # Histogram features on or off
+hog_feat = True # HOG features on or off
+```
+
+I have selected the `spatial_size` of 32 by 32 to match the sime of my images during the training. 
+
+I ended up using the parameters which gave me the best accuracy despite the loss in computation speed. I feel that in this case, the accuracy is a lot more important than computation speed, because the human lifes can be affected and the processing power is very cheap nowadays and it gets cheaper every year.
 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
